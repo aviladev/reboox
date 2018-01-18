@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
+import BookList from '../containers/BookList'
 
 export default class App extends Component {
   render() {
     return (
-      <h1>Reboox</h1>
-    );
+      <div>
+        <BookList />
+      </div>
+    )
   }
 }
