@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 class BookDetail extends Component {
   render () {
     const { book } = this.props
+    const { title, pages } = book || {}
 
     return (
       (!book)
@@ -16,7 +17,10 @@ class BookDetail extends Component {
         :
           <div>
             <h3>Details for:</h3>
-              {book.title}
+            <ul>
+              <li><strong>Title: </strong>{title}</li>
+              <li><strong>Pages: </strong>{pages}</li>
+            </ul>
           </div>
     )
   }
