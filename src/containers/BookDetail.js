@@ -10,15 +10,14 @@ class BookDetail extends Component {
     const { book } = this.props
 
     return (
-      <div>
-        <h3>Details for:</h3>
-        <div>
-          { book
-            ? book.title 
-            : 'Select a book to get started.'
-          }
-        </div>
-      </div>
+      (!book)
+        ?
+          <div>Select a book to get started</div>
+        :
+          <div>
+            <h3>Details for:</h3>
+              {book.title}
+          </div>
     )
   }
 }
